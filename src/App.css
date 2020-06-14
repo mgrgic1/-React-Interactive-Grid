@@ -1,0 +1,36 @@
+body {
+  background-color: turquoise;
+}
+
+
+.buttonGroups {
+  text-align: center;
+}
+
+.buttonGroups p,
+.buttonGroups form
+{
+  display: inline; padding-left: 15px;
+}
+
+.buttonGroups select {
+margin-left: 15px;
+
+}
+
+
+#buttonGroup1,
+#buttonGroup2,
+#buttonGroup3
+{
+  display: inline-flex;
+  flex-direction: column;
+  
+}
+
+#buttonGroup1 button,
+#buttonGroup2 button,
+#buttonGroup3 button
+{
+  margin: 5px;
+}
