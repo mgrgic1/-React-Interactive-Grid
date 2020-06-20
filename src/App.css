@@ -3,17 +3,17 @@ body {
 }
 
 
-.buttonGroups {
+.App {
   text-align: center;
 }
 
-.buttonGroups p,
-.buttonGroups form
+.App p,
+.App form
 {
   display: inline; padding-left: 15px;
 }
 
-.buttonGroups select {
+.App select {
 margin-left: 15px;
 
 }
@@ -33,4 +33,14 @@ margin-left: 15px;
 #buttonGroup3 button
 {
   margin: 5px;
+}
+
+tr{
+  border: 5px solid #000000;
+}
+
+td{
+  border: 5px solid #000000;
+  height : 30pt;
+  width : 30pt;
 }
