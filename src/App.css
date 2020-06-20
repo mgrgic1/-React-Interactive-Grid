@@ -3,17 +3,17 @@ body {
 }
 
 
-.buttonGroups {
+.App {
   text-align: center;
 }
 
-.buttonGroups p,
-.buttonGroups form
+.App p,
+.App form
 {
   display: inline; padding-left: 15px;
 }
 
-.buttonGroups select {
+.App select {
 margin-left: 15px;
 
 }
