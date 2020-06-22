@@ -45,19 +45,19 @@ class App extends Component{
   }//end rowRemove method
 
   colAdd = ()=>{
-    let rows = this.state.rowCount;
-    let cols = this.state.colCount;
-    cols++; //incrementing column var, to update state
-
+    let rows = this.state;
+    let cols = this.state;
+    //cols++; //incrementing column var, to update state
+   let newcol = cols+1;
     if(rows == 0){//row count must also increase if grid is empty
-      rows++;
+    //  rows++;
       this.setState({
-        rowCount: rows,
-        colCount: cols
+        rows: rows+1,
+        cols: newcol,
       });
     }//end if
     else{
-      this.setState({colCount: cols});
+      this.setState({newcol});
     }//end else
   }//end colAdd method
 
@@ -74,6 +74,7 @@ class App extends Component{
   render(){
     
     return(    
+    	
       <div class = "App">
       <div id = "buttonGroup1">
            <button onClick = {this.rowAdd}>Add Row</button>
@@ -81,6 +82,7 @@ class App extends Component{
            </div>
       
            <div id = "buttonGroup2">
+
            <button onClick = {this.colAdd}>Add Column</button>
            <button onClick = {this.colRemove}>Remove Column</button>
            </div>
