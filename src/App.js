@@ -5,18 +5,23 @@ import Table from './components/Table';
 
 class App extends Component{
   //constructor to initialize state values
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     //assigning initial states
     this.state = {
-      rowCount: 5,
-      colCount: 5,
+      rowCount: 0,
+      colCount: 0,
       selectedColor: ""
+   
     };
+     this.rowAdd = this.rowAdd.bind(this)
+      this.colAdd =this.colAdd.bind(this)
+       this.rowRemove = this.rowRemove.bind(this)
+      this.colRemove =this.colRemove.bind(this)
   } //end constructor
-
+   
 //*****Start add and remove methods******//
-  rowAdd = ()=>{
+  rowAdd  (){
     //obtaining values from state to store in temporary variables
     let rows = this.state.rowCount;
     let cols = this.state.colCount;
@@ -26,7 +31,7 @@ class App extends Component{
       cols++;
       this.setState({
         rowCount: rows,
-        colCount: cols
+        colCount: cols,
       });
     }//end if
     else{
@@ -44,24 +49,25 @@ class App extends Component{
     }//end if
   }//end rowRemove method
 
-  colAdd = ()=>{
-    let rows = this.state;
-    let cols = this.state;
-    //cols++; //incrementing column var, to update state
-   let newcol = cols+1;
+  colAdd(){
+   let rows = this.state.rowCount;
+    let cols = this.state.colCount;
+    cols++; //incrementing column var, to update state
+  
     if(rows == 0){//row count must also increase if grid is empty
-    //  rows++;
+      rows++;
+
       this.setState({
-        rows: rows+1,
-        cols: newcol,
+        rows: rows,
+        cols: cols+1,
       });
     }//end if
     else{
-      this.setState({newcol});
+      this.setState({cols});
     }//end else
   }//end colAdd method
 
-  colRemove = ()=>{
+  colRemove (){
     let cols = this.state.colCount;
     //only change value if rows is >= 0. Therefore rowCount can never fall below 0
     if(cols >= 0){
