@@ -23,8 +23,7 @@ export class Table extends Component {
     render() {
         return (
             <table>
-            <tr><td></td></tr>
-
+                {this.createTable}
             </table>
         )
     }

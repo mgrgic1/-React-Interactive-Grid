@@ -58,12 +58,12 @@ class App extends Component{
       rows++;
 
       this.setState({
-        rows: rows,
-        cols: cols+1,
+        rowCount: rows,
+        colCount: cols,
       });
     }//end if
     else{
-      this.setState({cols});
+      this.setState({colCount: cols});
     }//end else
   }//end colAdd method
 
